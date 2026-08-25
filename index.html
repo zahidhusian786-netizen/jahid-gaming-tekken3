@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Jahid Gaming - Tekken 3 Official Portal</title>
+    <title>Jahid Gaming - Tekken 3 Arena</title>
     <style>
         * {
             box-sizing: border-box;
@@ -13,7 +13,7 @@
             -webkit-user-select: none;
         }
         body {
-            background-color: #07090e;
+            background-color: #000000;
             color: #ffffff;
             font-family: 'Segoe UI', Roboto, sans-serif;
             display: flex;
@@ -22,57 +22,40 @@
             justify-content: flex-start;
             min-height: 100vh;
             width: 100vw;
-            overflow-x: hidden;
-            padding: 4px;
+            overflow: hidden;
+            padding: 2px;
         }
         .header {
-            margin: 4px 0;
+            margin: 2px 0;
             text-align: center;
         }
         .header h1 {
             color: #ff3344;
-            font-size: 18px;
-            letter-spacing: 1.2px;
+            font-size: 16px;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(255, 51, 68, 0.8);
+            text-shadow: 0 0 8px rgba(255, 51, 68, 0.8);
         }
-        .header p {
-            font-size: 11px;
-            color: #94a3b8;
-            margin-top: 2px;
-        }
-        /* Professional Action Bar */
         .action-bar {
-            margin: 6px 0;
+            margin: 4px 0;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
             gap: 6px;
-            width: 100%;
-            max-width: 600px;
         }
         .btn {
-            background: linear-gradient(135deg, #ff3344, #cc1122);
+            background: #ff3344;
             color: white;
             border: none;
-            padding: 8px 14px;
+            padding: 5px 12px;
             font-size: 11px;
             font-weight: bold;
-            border-radius: 20px;
+            border-radius: 15px;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(255, 51, 68, 0.4);
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            transition: 0.2s;
-            text-decoration: none;
         }
         .btn-wa {
-            background: linear-gradient(135deg, #22c55e, #16a34a);
-            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
-        }
-        .btn:active {
-            transform: scale(0.95);
+            background: #22c55e;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
         }
         .ad-banner-top {
             width: 100%;
@@ -81,20 +64,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
-        /* Game Container Optimized for Mobile & Curved Screens */
+        /* Clean Fullscreen Game Container without extra emulator buttons */
         .game-container {
             width: 100%;
-            max-width: 1000px;
             flex-grow: 1;
-            height: 72vh;
-            min-height: 450px;
+            height: 75vh;
             background: #000000;
             border: 2px solid #1e293b;
-            border-radius: 12px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9), 0 0 15px rgba(255, 51, 68, 0.2);
             position: relative;
         }
         iframe {
@@ -102,12 +82,6 @@
             height: 100%;
             border: none;
             display: block;
-        }
-        .footer-tip {
-            font-size: 10px;
-            color: #64748b;
-            margin-top: 4px;
-            text-align: center;
         }
     </style>
 
@@ -117,14 +91,12 @@
 <body>
 
     <div class="header">
-        <h1>Jahid Gaming: Tekken 3 Pro</h1>
-        <p>🎮 Ultimate Retro Fighting Experience</p>
+        <h1>Jahid Gaming: Tekken 3</h1>
     </div>
 
-    <!-- Professional Action Buttons -->
+    <!-- Action Buttons -->
     <div class="action-bar">
         <button class="btn" onclick="copyLink()">📋 Copy Link</button>
-        <button class="btn" onclick="shareSite()">🚀 Share Site</button>
         <a href="https://wa.me/?text=" class="btn btn-wa" id="waShare" target="_blank">💬 Chat / Feedback</a>
     </div>
 
@@ -142,41 +114,23 @@
         <script type="text/javascript" src="https://www.highrevenueformat.com/a5e962e64f8e498dfa3c3d3685c23eef/invoke.js"></script>
     </div>
 
-    <!-- Game Frame -->
+    <!-- Direct Clean Tekken 3 Player Frame -->
     <div class="game-container">
-        <iframe src="https://www.retrogames.cc/embed/41793-tekken-3.html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
-    </div>
-
-    <div class="footer-tip">
-        💡 Tip: Rotate your phone to Landscape mode for the best fullscreen experience!
+        <iframe src="https://www.playretrogames.com/1523-tekken-3" allowfullscreen="true" scrolling="no"></iframe>
     </div>
 
     <script>
-        // Automatically attach current site link to WhatsApp chat button
         document.addEventListener("DOMContentLoaded", function() {
             const currentUrl = encodeURIComponent(window.location.href);
-            const waBtn = document.getElementById("waShare");
-            waBtn.href = `https://wa.me/?text=🔥%20Bhai%20is%20awesome%20Tekken%203%20game%20ko%20khel%20kar%20dekh!%20Ye%20raha%20link:%20${currentUrl}`;
+            document.getElementById("waShare").href = `https://wa.me/?text=🔥%20Bhai%20Tekken%203%20khelne%20ke%20liye%20yeh%20link%20dekh:%20${currentUrl}`;
         });
-
         function copyLink() {
             navigator.clipboard.writeText(window.location.href);
-            alert("🔗 Website Link Copied Successfully!");
-        }
-
-        function shareSite() {
-            if (navigator.share) {
-                navigator.share({
-                    title: 'Jahid Gaming - Tekken 3',
-                    text: 'Play Tekken 3 online for free!',
-                    url: window.location.href
-                }).catch(console.error);
-            } else {
-                copyLink();
-            }
+            alert("🔗 Link Copied Successfully!");
         }
     </script>
 
 </body>
 </html>
+
 
