@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Jahid Gaming - Retro Fighter</title>
+    <title>Jahid Gaming - Tekken 3 Fullscreen</title>
     <style>
         * {
             box-sizing: border-box;
@@ -13,25 +13,28 @@
             -webkit-user-select: none;
         }
         body {
-            background-color: #0b0f19;
+            background-color: #000000;
             color: #ffffff;
             font-family: 'Segoe UI', Roboto, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: flex-start;
             min-height: 100vh;
-            padding: 6px;
+            width: 100vw;
+            overflow-x: hidden;
+            padding: 2px;
         }
         .header {
-            margin: 6px 0;
+            margin: 2px 0;
             text-align: center;
         }
         .header h1 {
             color: #ff3344;
-            font-size: 20px;
-            letter-spacing: 1.5px;
+            font-size: 16px;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(255, 51, 68, 0.6);
+            text-shadow: 0 0 8px rgba(255, 51, 68, 0.8);
         }
         .ad-banner-top {
             width: 100%;
@@ -40,24 +43,26 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
-        .game-wrapper {
+        /* Fullscreen & Curved Screen Optimized Wrapper */
+        .game-container {
             width: 100%;
-            max-width: 850px;
-            height: 65vh;
-            min-height: 380px;
+            flex-grow: 1;
+            height: 82vh;
+            min-height: 500px;
             background: #000000;
-            border: 2px solid #1e293b;
-            border-radius: 10px;
+            border: none;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+            box-shadow: 0 0 25px rgba(255, 51, 68, 0.4);
             position: relative;
         }
         iframe {
             width: 100%;
             height: 100%;
             border: none;
+            display: block;
         }
     </style>
 
@@ -67,7 +72,7 @@
 <body>
 
     <div class="header">
-        <h1>Jahid Gaming: Retro Fighter</h1>
+        <h1>Jahid Gaming: Tekken 3 Pro</h1>
     </div>
 
     <!-- Banner Ad (300x250) -->
@@ -84,11 +89,12 @@
         <script type="text/javascript" src="https://www.highrevenueformat.com/a5e962e64f8e498dfa3c3d3685c23eef/invoke.js"></script>
     </div>
 
-    <!-- Live Direct Low-Lag Retro Engine -->
-    <div class="game-wrapper">
+    <!-- Fullscreen Edge-to-Edge Game Frame -->
+    <div class="game-container">
         <iframe src="https://www.retrogames.cc/embed/41793-tekken-3.html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
     </div>
 
 </body>
 </html>
+
 
