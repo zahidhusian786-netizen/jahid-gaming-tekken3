@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Jahid Gaming - Tekken 3 Official</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Jahid Gaming - Tekken 3 Lite</title>
     <style>
         * {
             box-sizing: border-box;
@@ -22,33 +22,33 @@
             justify-content: flex-start;
             min-height: 100vh;
             width: 100vw;
-            overflow-y: auto;
-            padding: 4px;
+            overflow: hidden;
+            padding: 2px;
         }
         .header {
-            margin: 6px 0;
+            margin: 2px 0;
             text-align: center;
         }
         .header h1 {
             color: #ff3344;
-            font-size: 18px;
+            font-size: 15px;
             letter-spacing: 1px;
             text-transform: uppercase;
-            text-shadow: 0 0 8px rgba(255, 51, 68, 0.8);
+            text-shadow: 0 0 6px rgba(255, 51, 68, 0.8);
         }
         .action-bar {
-            margin: 6px 0;
+            margin: 3px 0;
             display: flex;
-            gap: 8px;
+            gap: 6px;
         }
         .btn {
             background: #ff3344;
             color: white;
             border: none;
-            padding: 6px 14px;
-            font-size: 12px;
+            padding: 4px 10px;
+            font-size: 10px;
             font-weight: bold;
-            border-radius: 15px;
+            border-radius: 12px;
             cursor: pointer;
         }
         .btn-wa {
@@ -57,26 +57,25 @@
             display: inline-flex;
             align-items: center;
         }
+        /* Chhota banner taki game ke liye zyada jagah mile aur lag kam ho */
         .ad-banner-top {
             width: 100%;
             max-width: 300px;
-            min-height: 250px;
+            min-height: 50px;
+            max-height: 90px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 8px;
+            margin-bottom: 2px;
+            overflow: hidden;
         }
         .game-container {
-            width: 100%;
-            max-width: 900px;
-            height: 78vh;
-            min-height: 480px;
+            width: 100vw;
+            flex-grow: 1;
+            height: 82vh;
             background: #000000;
-            border: 2px solid #1e293b;
-            border-radius: 10px;
-            overflow: hidden;
+            border: none;
             position: relative;
-            margin-bottom: 20px;
         }
         iframe {
             width: 100%;
@@ -98,36 +97,36 @@
     <!-- Action Buttons -->
     <div class="action-bar">
         <button class="btn" onclick="copyLink()">📋 Copy Link</button>
-        <a href="https://wa.me/?text=" class="btn btn-wa" id="waShare" target="_blank">💬 Chat / Feedback</a>
+        <a href="https://wa.me/?text=" class="btn btn-wa" id="waSource" target="_blank">💬 Feedback</a>
     </div>
 
-    <!-- Banner Ad (300x250) -->
+    <!-- Optimized Small Ad Banner to Reduce Lag -->
     <div class="ad-banner-top">
         <script type="text/javascript">
             atOptions = {
                 'key' : 'a5e962e64f8e498dfa3c3d3685c23eef',
                 'format' : 'iframe',
-                'height' : 250,
-                'width' : 300,
+                'height' : 90,
+                'width' : 728,
                 'params' : {}
             };
         </script>
         <script type="text/javascript" src="https://www.highrevenueformat.com/a5e962e64f8e498dfa3c3d3685c23eef/invoke.js"></script>
     </div>
 
-    <!-- Direct Playable Tekken 3 Emulator Frame -->
+    <!-- Ultra Fast Low-Lag Tekken 3 Arcade Frame -->
     <div class="game-container">
-        <iframe src="https://www.retrogames.cc/embed/40238-tekken-3.html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
+        <iframe src="https://www.retrogames.cc/embed/40628-tekken-3.html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const currentUrl = encodeURIComponent(window.location.href);
-            document.getElementById("waShare").href = `https://wa.me/?text=🔥%20Bhai%20असली%20Tekken%203%20खेलने%20के%20लिए%20ये%20लिंक%20देख:%20${currentUrl}`;
+            document.getElementById("waSource").href = `https://wa.me/?text=🔥%2520Bhai%2520Tekken%25203%2520yeh%2520dekh:%2520${currentUrl}`;
         });
         function copyLink() {
             navigator.clipboard.writeText(window.location.href);
-            alert("🔗 Link Copied Successfully!");
+            alert("🔗 Link Copied!");
         }
     </script>
 
