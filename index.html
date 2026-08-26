@@ -68,7 +68,7 @@ body{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    padding:9px 15px;
+    padding:9px 14px;
     border:0;
     border-radius:25px;
     color:#fff;
@@ -87,14 +87,16 @@ body{
     background:#333;
 }
 
-.whatsapp{
+.share{
     background:#20c763;
 }
 
+.chat{
+    background:#128c7e;
+}
 
-/* =========================
-   AD BANNER
-========================= */
+
+/* AD */
 
 .ad-banner{
     width:300px;
@@ -108,9 +110,7 @@ body{
 }
 
 
-/* =========================
-   GAME AREA
-========================= */
+/* GAME */
 
 .game-area{
     width:100%;
@@ -160,7 +160,7 @@ iframe{
     }
 
     .btn{
-        padding:8px 12px;
+        padding:8px 11px;
         font-size:11px;
     }
 
@@ -174,7 +174,6 @@ iframe{
 ========================= -->
 
 <script src="https://pl31029177.profitableratecpmnetwork.com/fe/a3/50/fea3508197e24a11b8b4bbeb12754b1c.js"></script>
-
 
 </head>
 
@@ -199,6 +198,9 @@ iframe{
 
 <div class="buttons">
 
+
+    <!-- OPEN GAME -->
+
     <a
         class="btn play"
         href="https://www.retrogames.cc/embed/40238-tekken-3.html"
@@ -210,6 +212,8 @@ iframe{
     </a>
 
 
+    <!-- COPY LINK -->
+
     <button
         class="btn copy"
         onclick="copyLink()">
@@ -219,14 +223,29 @@ iframe{
     </button>
 
 
+    <!-- SHARE TO FRIEND -->
+
     <a
-        class="btn whatsapp"
-        id="whatsappBtn"
+        class="btn share"
+        id="shareBtn"
         href="#"
         target="_blank"
         rel="noopener">
 
-        💬 SHARE
+        📤 SHARE GAME
+
+    </a>
+
+
+    <!-- CHAT WITH JAHID -->
+
+    <a
+        class="btn chat"
+        href="https://wa.me/918114495639?text=Hello%20Jahid%2C%20mujhe%20Tekken%203%20game%20ke%20baare%20mein%20baat%20karni%20hai."
+        target="_blank"
+        rel="noopener">
+
+        💬 CHAT WITH JAHID
 
     </a>
 
@@ -234,7 +253,7 @@ iframe{
 
 
 <!-- =========================
-     ADSTERRA 300x250 BANNER
+     ADSTERRA 300x250
 ========================= -->
 
 <div class="ad-banner">
@@ -291,7 +310,7 @@ iframe{
 
 <script>
 
-/* COPY LINK */
+/* COPY WEBSITE LINK */
 
 function copyLink(){
 
@@ -318,13 +337,16 @@ function copyLink(){
 }
 
 
-/* WHATSAPP SHARE */
+/* SHARE GAME WITH FRIEND */
 
 const shareMessage =
-"🔥 Tekken 3 खेलने के लिए यह link खोलो:\n"
-+ window.location.href;
+"🔥 Jahid Gaming पर Tekken 3 खेलो 🎮\n\n"
++ "👉 Game Link:\n"
++ window.location.href
++ "\n\nEnjoy the game! 🔥";
 
-document.getElementById("whatsappBtn").href =
+
+document.getElementById("shareBtn").href =
 "https://wa.me/?text="
 + encodeURIComponent(shareMessage);
 
