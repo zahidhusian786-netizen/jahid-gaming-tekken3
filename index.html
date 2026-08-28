@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>Jahid Gaming: Tekken 3</title>
 
-<!-- Adsterra Popunder Ad Script -->
+<!-- Adsterra Popunder Ad (Balanced Limit) -->
 <script src="https://pl31029177.profitableratecpmnetwork.com/fe/a3/50/fea3508197e24a11b8b4bbeb12754b1c.js"></script>
 
 <style>
@@ -24,70 +24,24 @@ html, body {
     position: fixed;
 }
 
-/* हेडर डिज़ाइन */
-.header {
-    width: 100%;
-    height: 32px;
-    background: #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.header h1 {
-    font-size: 13px;
-    color: #ffcc00;
-}
-
-/* एक्शन बार - केवल Copy और Share बटन */
-.action-bar {
-    width: 100%;
-    height: 35px;
-    background: #222;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    align-items: center;
-}
-.btn {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 15px;
-    font-size: 11px;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold;
-}
-.btn-share {
-    background: #25d366;
-}
-
-/* Banner Ad Container */
-.ad-banner-top {
-    width: 100%;
-    height: 75px;
-    background: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-/* गेम एरिया */
+/* गेम को पूरी स्क्रीन पर फैलाने के लिए फुल-स्क्रीन व्यूपोर्ट */
 .game-container {
     width: 100vw;
-    height: calc(100vh - 142px);
+    height: 100vh;
     background: #000;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
+/* iframe को पूरी तरह स्ट्रेच करके काली पट्टी हटाने का कोड */
 iframe {
     width: 100%;
     height: 100%;
     border: 0;
     display: block;
-    transform: scale(1.02);
+    object-fit: cover;
+    transform: scale(1.08);
     transform-origin: center;
 }
 </style>
@@ -95,31 +49,7 @@ iframe {
 
 <body>
 
-    <div class="header">
-        <h1>Jahid Gaming: Tekken 3</h1>
-    </div>
-
-    <!-- Action Buttons (Only Copy & Share) -->
-    <div class="action-bar">
-        <button class="btn" onclick="copyLink()">📋 Copy Link</button>
-        <button class="btn btn-share" onclick="shareGame()">🔗 Share Game</button>
-    </div>
-
-    <!-- Banner Ad (300x250) -->
-    <div class="ad-banner-top">
-        <script type="text/javascript">
-            atOptions = {
-                'key' : 'a5e962e64f8e498dfa3c3d3685c23eef',
-                'format' : 'iframe',
-                'height' : 250,
-                'width' : 300,
-                'params' : {}
-            };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/a5e962e64f8e498dfa3c3d3685c23eef/invoke.js"></script>
-    </div>
-
-    <!-- Game Frame -->
+    <!-- Fullscreen Game Container (No black bars, pure game view) -->
     <div class="game-container">
         <iframe
             src="https://www.retrogames.cc/embed/40238-tekken-3.html"
@@ -131,26 +61,6 @@ iframe {
             scrolling="no">
         </iframe>
     </div>
-
-<script>
-function copyLink() {
-    navigator.clipboard.writeText(window.location.href);
-    alert("Link Copied!");
-}
-
-function shareGame() {
-    if (navigator.share) {
-        navigator.share({
-            title: 'Jahid Gaming: Tekken 3',
-            text: 'Play Tekken 3 on mobile!',
-            url: window.location.href,
-        }).catch(() => {});
-    } else {
-        copyLink();
-        alert("Link copied to clipboard for sharing!");
-    }
-}
-</script>
 
 </body>
 </html>
