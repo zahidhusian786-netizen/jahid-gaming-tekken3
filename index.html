@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>Jahid Gaming: Tekken 3</title>
 
-<!-- Adsterra Popunder Ad (Balanced Limit) -->
+<!-- Adsterra Popunder Ad Script -->
 <script src="https://pl31029177.profitableratecpmnetwork.com/fe/a3/50/fea3508197e24a11b8b4bbeb12754b1c.js"></script>
 
 <style>
@@ -18,13 +18,11 @@ html, body {
     width: 100%;
     height: 100%;
     background: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
     overflow: hidden;
     position: fixed;
 }
 
-/* गेम को पूरी स्क्रीन पर फैलाने के लिए फुल-स्क्रीन व्यूपोर्ट */
+/* पबजी / फ्री फायर जैसी पूरी फुल स्क्रीन और कोई काली पट्टी नहीं */
 .game-container {
     width: 100vw;
     height: 100vh;
@@ -34,14 +32,13 @@ html, body {
     left: 0;
 }
 
-/* iframe को पूरी तरह स्ट्रेच करके काली पट्टी हटाने का कोड */
 iframe {
     width: 100%;
     height: 100%;
     border: 0;
     display: block;
-    object-fit: cover;
-    transform: scale(1.08);
+    /* गेम को पूरी स्क्रीन पर फैलाने और कंट్రోल्स को अंदर सेट करने के लिए ज़ूम फिक्स */
+    transform: scale(1.03);
     transform-origin: center;
 }
 </style>
@@ -49,7 +46,6 @@ iframe {
 
 <body>
 
-    <!-- Fullscreen Game Container (No black bars, pure game view) -->
     <div class="game-container">
         <iframe
             src="https://www.retrogames.cc/embed/40238-tekken-3.html"
