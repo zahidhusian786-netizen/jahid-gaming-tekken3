@@ -1,357 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width,
-      initial-scale=1.0,
-      maximum-scale=1.0,
-      user-scalable=yes">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Jahid Gaming - Tekken 3</title>
 
-<style>
-
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-html,body{
-    width:100%;
-    min-height:100%;
-    background:#000;
-    color:#fff;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-body{
-    text-align:center;
-    overflow-x:hidden;
-}
-
-/* HEADER */
-
-.header{
-    padding:14px 5px 8px;
-}
-
-.header h1{
-    color:#ff3344;
-    font-size:21px;
-    font-weight:bold;
-    text-shadow:0 0 10px #ff3344;
-}
-
-.subtitle{
-    margin-top:5px;
-    color:#aaa;
-    font-size:12px;
-}
-
-
-/* BUTTON BAR */
-
-.buttons{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:8px;
-    flex-wrap:wrap;
-    margin:8px 5px 12px;
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:9px 14px;
-    border:0;
-    border-radius:25px;
-    color:#fff;
-    text-decoration:none;
-    font-size:12px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.play{
-    background:#e9273f;
-    box-shadow:0 0 10px rgba(233,39,63,.5);
-}
-
-.copy{
-    background:#333;
-}
-
-.share{
-    background:#20c763;
-}
-
-.chat{
-    background:#128c7e;
-}
-
-
-/* AD */
-
-.ad-banner{
-    width:300px;
-    max-width:100%;
-    min-height:250px;
-    margin:8px auto 12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-}
-
-
-/* GAME */
-
-.game-area{
-    width:100%;
-    max-width:1000px;
-    margin:auto;
-    padding:0 4px;
-}
-
-.game-box{
-    width:100%;
-    height:calc(100vh - 430px);
-    min-height:430px;
-    background:#000;
-    border:2px solid #222;
-    border-radius:8px;
-    overflow:hidden;
-}
-
-iframe{
-    width:100%;
-    height:100%;
-    border:0;
-    display:block;
-}
-
-
-/* INFO */
-
-.info{
-    padding:10px 5px 20px;
-    color:#777;
-    font-size:11px;
-}
-
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-    .header h1{
-        font-size:18px;
-    }
-
-    .game-box{
-        height:calc(100vh - 430px);
-        min-height:430px;
-    }
-
-    .btn{
-        padding:8px 11px;
-        font-size:11px;
-    }
-
-}
-
-</style>
-
-
-<!-- =========================
-     ADSTERRA POPUNDER
-========================= -->
-
+<!-- Adsterra Single Controlled Ad (कम से कम और कंट्रोल वाले ऐड्स) -->
 <script src="https://pl31029177.profitableratecpmnetwork.com/fe/a3/50/fea3508197e24a11b8b4bbeb12754b1c.js"></script>
 
-</head>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+    position: fixed;
+}
 
+/* ऑटो-फिट फुलस्क्रीन गेम कंटेनर */
+.game-container {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    object-fit: contain;
+}
+</style>
+</head>
 
 <body>
 
-
-<!-- HEADER -->
-
-<div class="header">
-
-    <h1>🔥 JAHID GAMING 🔥</h1>
-
-    <div class="subtitle">
-        TEKKEN 3 • PLAY ONLINE
-    </div>
-
+<div class="game-container">
+    <iframe
+        src="https://www.retrogames.cc/embed/40238-tekken-3.html"
+        title="Tekken 3"
+        allow="autoplay; fullscreen; gamepad; accelerometer; gyroscope"
+        allowfullscreen
+        webkitallowfullscreen
+        mozallowfullscreen
+        scrolling="no">
+    </iframe>
 </div>
-
-
-<!-- BUTTONS -->
-
-<div class="buttons">
-
-
-    <!-- OPEN GAME -->
-
-    <a
-        class="btn play"
-        href="https://www.retrogames.cc/embed/40238-tekken-3.html"
-        target="_blank"
-        rel="noopener">
-
-        🎮 OPEN TEKKEN 3
-
-    </a>
-
-
-    <!-- COPY LINK -->
-
-    <button
-        class="btn copy"
-        onclick="copyLink()">
-
-        📋 COPY LINK
-
-    </button>
-
-
-    <!-- SHARE TO FRIEND -->
-
-    <a
-        class="btn share"
-        id="shareBtn"
-        href="#"
-        target="_blank"
-        rel="noopener">
-
-        📤 SHARE GAME
-
-    </a>
-
-
-    <!-- CHAT WITH JAHID -->
-
-    <a
-        class="btn chat"
-        href="https://wa.me/918114495639?text=Hello%20Jahid%2C%20mujhe%20Tekken%203%20game%20ke%20baare%20mein%20baat%20karni%20hai."
-        target="_blank"
-        rel="noopener">
-
-        💬 CHAT WITH JAHID
-
-    </a>
-
-</div>
-
-
-<!-- =========================
-     ADSTERRA 300x250
-========================= -->
-
-<div class="ad-banner">
-
-<script type="text/javascript">
-
-    atOptions = {
-        'key' : 'a5e962e64f8e498dfa3c3d3685c23eef',
-        'format' : 'iframe',
-        'height' : 250,
-        'width' : 300,
-        'params' : {}
-    };
-
-</script>
-
-<script
-    type="text/javascript"
-    src="https://www.highrevenueformat.com/a5e962e64f8e498dfa3c3d3685c23eef/invoke.js">
-</script>
-
-</div>
-
-
-<!-- =========================
-     TEKKEN 3 GAME
-========================= -->
-
-<div class="game-area">
-
-    <div class="game-box">
-
-        <iframe
-            src="https://www.retrogames.cc/embed/40238-tekken-3.html"
-            title="Tekken 3"
-            allow="autoplay; fullscreen; gamepad"
-            allowfullscreen
-            webkitallowfullscreen
-            mozallowfullscreen
-            scrolling="no">
-        </iframe>
-
-    </div>
-
-</div>
-
-
-<!-- FOOTER -->
-
-<div class="info">
-    🎮 Jahid Gaming • Tekken 3
-</div>
-
-
-<script>
-
-/* COPY WEBSITE LINK */
-
-function copyLink(){
-
-    if(navigator.clipboard){
-
-        navigator.clipboard.writeText(
-            window.location.href
-        ).then(function(){
-
-            alert("✅ Link Copied!");
-
-        }).catch(function(){
-
-            alert("🔗 Link copy नहीं हो पाया।");
-
-        });
-
-    }else{
-
-        alert("🔗 अपना website link copy कर लो।");
-
-    }
-
-}
-
-
-/* SHARE GAME WITH FRIEND */
-
-const shareMessage =
-"🔥 Jahid Gaming पर Tekken 3 खेलो 🎮\n\n"
-+ "👉 Game Link:\n"
-+ window.location.href
-+ "\n\nEnjoy the game! 🔥";
-
-
-document.getElementById("shareBtn").href =
-"https://wa.me/?text="
-+ encodeURIComponent(shareMessage);
-
-</script>
-
 
 </body>
 </html>
